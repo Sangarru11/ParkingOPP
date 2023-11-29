@@ -47,7 +47,15 @@ public class MainController {
                         System.out.println("Hemos aparcado su coche en la plaza"+parked);
                     }
                 }
+                break;
             case 4:
+                String license = Menu.unparkingMenu();
+                Car carToBeUnParked = parking.unParkCar(license);
+                if(carToBeUnParked==null){
+                    System.out.println("Error al sacar el coche");
+                }else{
+                    System.out.println("El coche que sacamos es"+carToBeUnParked);
+                }
                 break;
             case 5:
                 break;
